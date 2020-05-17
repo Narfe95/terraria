@@ -8,11 +8,20 @@ Creates a docker container based on alpine linux with glibc.
 
 ## Running the container
 Run container by running
-Replace the world folder: ````docker run -it -p 7777:7777/tcp -v "/absolute/path/to/world/folder":"/terraria/world" terraria:latest````
-Replace server.conf and world folder: ````docker run -it -p 7777:7777/tcp -v "/absolute/path/to/world/folder":"/terraria/world" -v "/absolute/path/to/server.conf":"/terraria/server.conf" terraria:latest````
+
+Replace the world folder:
+```
+docker run -it -p 7777:7777/tcp -v "/absolute/path/to/world/folder":"/terraria/world" terraria:latest
+```
+
+Replace server.conf and world folder:
+```
+docker run -it -p 7777:7777/tcp -v "/absolute/path/to/world/folder":"/terraria/world" -v "/absolute/path/to/server.conf":"/terraria/server.conf" terraria:latest
+```
 
 ## Terraria server.conf config example
-````maxplayers=8
+```
+maxplayers=8
 world=/terraria/world/docker.wld
 port=7777
 password=
@@ -43,6 +52,7 @@ journeypermission_wind_setfrozen=1
 journeypermission_increaseplacementrange=1
 journeypermission_setdifficulty=1
 journeypermission_biomespread_setfrozen=1
-journeypermission_setspawnrate=1````
+journeypermission_setspawnrate=1
+```
 
 Detach from docker by pressing: `<ctrl-p> <ctrl-q>`
