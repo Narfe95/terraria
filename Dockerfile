@@ -8,4 +8,5 @@ RUN apk update && apk add wget && mkdir /terraria && cd /terraria && wget ${down
 EXPOSE 7777/tcp
 COPY files/server.conf /terraria/
 COPY files/start_server.sh /
+HEALTHCHECK --interval=3s --timeout=1s --start-period=15s --retries=100 CMD /usr/bin/nc -z localhost 7777
 ENTRYPOINT [ "/start_server.sh" ]
