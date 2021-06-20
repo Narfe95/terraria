@@ -1,7 +1,7 @@
 FROM frolvlad/alpine-glibc
 
-ARG version_number=1423
-ARG download_url=https://terraria.org/system/dedicated_servers/archives/000/000/046/original/terraria-server-1423.zip
+ARG version_number=1412
+ARG download_url=https://www.terraria.org/system/dedicated_servers/archives/000/000/042/original/terraria-server-${version_number}.zip
 
 RUN apk update && \
 apk add wget && \
